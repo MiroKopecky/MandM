@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lakki Reddy" rel="stylesheet"/>
+    <title>M&M</title>
+    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <form id="customForm">
+
+        <label for="name">Meno:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="confirm"></label>
+        <input type="radio" id="confirmYes" name="confirm" value="Prídem" required>
+        <label for="confirmYes">Prídem</label><br>
+        <input type="radio" id="confirmLate" name="confirm" value="Prídem po 21:00" required>
+        <label for="confirmLate">Prídem po 21:00</label><br>
+        <input type="radio" id="confirmNo" name="confirm" value="Neprídem" required>
+        <label for="confirmNo">Neprídem</label><br><br>
+
+        <label for="request">Požiadavky:</label><br>
+        <textarea type="" id="request" name="request"></textarea><br><br>
+
+        <button type="submit">Odoslať</button>
+    </form>
+
+    <h1 id="successMessage" style="display: none;">Odoslané</h1>
+    <h1 id="failureMessage" style="display: none;">Chyba</h1>
+    <a id="fillAgain" style="display: none;" href="./form.html">Znova vyplniť</a>
+
+    <footer>
+        <p class="podpis">2023 MADE BY © M&M</p>
+      </footer>
+
+    <script>
+        // Function to load the Google Form
+        function loadGoogleForm() {
+            var googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdQohZt9WaFPt3H62jvnpFHlk6em1u-q9DANPSdVJyMQvOVXg/viewform"; // Replace with your Google Form URL
+
+            $("#googleFormContainer").html('<iframe src="' + googleFormUrl + '" width="0" height="0" style="display:none"></iframe>');
+        }
+
+        // Intercept form submission event
+        $("#customForm").submit(function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var name = $("#name").val();
+            var confirm = $("#confirmYes:checked").val() || $("#confirmNo:checked").val();
+            var request = $("#request").val();
+
+            // Submit values to the Google Form
+            var googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdQohZt9WaFPt3H62jvnpFHlk6em1u-q9DANPSdVJyMQvOVXg/formResponse"; // Replace with your Google Form URL
+
+            $.ajax({
+                url: googleFormUrl,
+                data: {
+                    "entry.893839721": name,
+                    "entry.1114165787": confirm,
+                    "entry.37880607": request
+                },
+                type: "POST",
+                dataType: "xml",
+                statusCode: {
+                    0: function() {
+                        // Show success message and hide the form
+                        $("#customForm").hide();
+                        $("#successMessage").show();
+                        $("#fillAgain").show();
+                    },
+                    200: function() {
+                        // Error message
+                        $("#failureMessage").show();
+                        $("#fillAgain").show();
+                    }
+                }
+            });
+        });
+
+        // Execute the function when the page loads
+        $(document).ready(function() {
+            loadGoogleForm();
+        });
+    </script>
+</body>
+</html>
