@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <link href="https://fonts.googleapis.com/css?family=Lakki Reddy" rel="stylesheet"/>
     <title>M&M</title>
     <link rel="stylesheet" href="form.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
     <form id="customForm">
 
-        <label for="name">Meno:</label>
-        <input type="text" id="name" name="name" required><br><br>
+        <div>
+            <label for="name">Meno:</label><br>
+            <input type="text" id="name" name="name" required>
+        </div>
 
-        <label for="confirm"></label>
-        <input type="radio" id="confirmYes" name="confirm" value="Prídem" required>
-        <label for="confirmYes">Prídem</label><br>
-        <input type="radio" id="confirmLate" name="confirm" value="Prídem po 21:00" required>
-        <label for="confirmLate">Prídem po 21:00</label><br>
-        <input type="radio" id="confirmNo" name="confirm" value="Neprídem" required>
-        <label for="confirmNo">Neprídem</label><br><br>
+        <div>
+            <label for="confirm"></label>
+            <input type="radio" id="confirmYes" name="confirm" value="Prídem" required>
+            <label for="confirmYes">Prídem</label><br>
+            <input type="radio" id="confirmLate" name="confirm" value="Prídem po 21:00" required>
+            <label for="confirmLate">Prídem po 21:00</label><br>
+            <input type="radio" id="confirmNo" name="confirm" value="Neprídem" required>
+            <label for="confirmNo">Neprídem</label>
+        </div>
 
-        <label for="request">Požiadavky:</label><br>
-        <textarea type="" id="request" name="request"></textarea><br><br>
+        <div>
+            <label for="request">Požiadavky na jedlo (a iné):</label><br>
+            <textarea type="" id="request" name="request" placeholder="Prosíme vyplniť, ak ste pozvaný aj na večeru:)"></textarea>
+        </div>
 
         <button type="submit">Odoslať</button>
     </form>
@@ -32,9 +41,7 @@
     <h1 id="failureMessage" style="display: none;">Chyba</h1>
     <a id="fillAgain" style="display: none;" href="./form.html">Znova vyplniť</a>
 
-    <footer>
-        <p class="podpis">2023 MADE BY © M&M</p>
-      </footer>
+
 
     <script>
         // Function to load the Google Form

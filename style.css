@@ -2,10 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 body {
-	text-align: center;	
-	margin: 1em;
-	background-color: #F3F5F9;
+	font-family: 'poppins', sans-serif !important;
+	text-align: center;
+	background-color: #ffffff;
 	color: white;
+	margin: 0px;
+	overflow-x: hidden;
+}
+
+.top {
 	background-image: url("bg.png");
 	background-attachment: fixed;
 	background-position: center;
@@ -13,39 +18,37 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size:cover;
+	height: 100vh;
 }
 
-.gif {
-	padding-top: 13%;
+#date {
+	margin: 0 auto;
+	width: 65vh;
+	height: auto;
+	margin-top: 35vh;
 }
 
-@media (max-width: 768px){
-	.gif {
-		padding: 15%;
-	}
+#name {
+	content:url("name.png");
+	margin: 0 auto;
+	max-width: 100vh;
+	height: auto;
+	margin-top: 15vh;
 }
 
 h1 {
-	font-family: 'poppins', sans-serif !important;
+	color: black;
 	font-size: 20px;
-	margin-top: 0.3em;
-	margin-bottom: 0%;
+	margin-top: 150px;
+	margin-bottom: 200px;
 }
 
-.text {
-	font-family: 'poppins', sans-serif !important;
-	font-weight: 200; 
-    font-size: 20px;
-	letter-spacing: 0.4em;
-	padding-bottom: 20px;
-}
 
 .podpis {
 	font-size: 0.8rem;
 }
 
 p {
-	font-family: 'poppins', sans-serif !important;
 	font-weight: 200; 
     font-size: 0.8rem;
 }
@@ -60,33 +63,48 @@ footer {
 	text-align: center;
 }
 
-img {
-	padding: 0 30px;
-	transition: all .3s ease-in-out;
-}
-
-@media (max-width: 768px){
-	img {
-		padding-top: 30px;
-	}
-}
-
 a {
 	text-decoration: none;
-	
 }
 
 a button {
-	background: white;
+	font-family: inherit;
+	background: rgba(255, 255, 255, 0.342);
 	border: none;
 	border-radius: 20px;
-	padding: 10px 30px;
+	padding: 12px 20px;
 	cursor: pointer;
 	transition: 0.3s;
+	text-transform: uppercase;
+	color: #ffffff85;
 	margin-top: 20px;
 }
 
 a button:hover {
-	background: #ececec;
+	background: #ffffff80;
 	transition: 0.3s;
+}
+
+@media (max-width: 1450px){
+	#name {
+		max-width: 100vh;
+	}
+}
+
+@media (max-width: 1000px){
+	#name {
+		max-width: 75vh;
+	}
+}
+
+@media (max-width: 768px){
+	#date {
+		width: 45vh;
+		margin-top: 38vh;
+	}
+	#name {
+		margin-top: 10vh;
+		content:url("name1.png");
+		max-width: 100%; 
+	}
 }
