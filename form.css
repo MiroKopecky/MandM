@@ -98,6 +98,7 @@ input[type=text]:focus {
 	padding: 15px 10px;
 	outline: none;
 	color: black;
+	margin-top: 10px;
 }
 
 textarea {
@@ -135,6 +136,7 @@ textarea:focus {
 	padding: 15px 10px;
 	outline: none;
 	color: black;
+	margin-top: 10px;
 }
 
 button {
