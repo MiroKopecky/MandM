@@ -17,8 +17,20 @@ body {
 	position: relative;
 }
 
-p {
+.small, .small2 {
+	padding-top: 20px;
 	color: black;
+	text-transform: uppercase;
+	width: 70%;
+	margin: 0 auto;
+}
+
+.small2 {
+	padding-top: 50px;
+}
+
+p span {
+	color: #603232;
 }
 
 
@@ -60,9 +72,16 @@ p {
 	color: black;
 	font-size: 20px;
 	margin-top: 50px;
-	margin-bottom: 200px;
 	line-height: 40px;
 	text-transform: uppercase;
+}
+
+#line {
+	width: 70%;
+	margin: 0 auto;
+	border: 1px solid #C9C9C9;
+	margin-bottom: 20px;
+	margin-top: 50px;
 }
 
 .more {
@@ -72,18 +91,23 @@ p {
 	margin-bottom: 200px;
 }
 
-footer {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	background-color: black;
-	color: white;
-	text-align: center;
+
+
+.footer {
+	padding-top: 100px;
+	color: #C9C9C9;
 }
 
 a {
-	text-decoration: none;
+	text-transform: uppercase;
+	color: black;
+	transition: 0.3s;
+}
+
+a:hover {
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 0.662);
+	transition: 0.3s;
 }
 
 a button {
