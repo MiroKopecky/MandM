@@ -1,8 +1,9 @@
 @import url("http://fonts.cdnfonts.com/css/daydream");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
 
 body {
-	font-family: 'poppins', sans-serif !important;
+	font-family: 'bellefair', sans-serif !important;
 	text-align: center;
 	background-color: #ffffff;
 	color: white;
@@ -31,26 +32,29 @@ body {
 #name {
 	content:url("name.png");
 	margin: 0 auto;
-	max-width: 100vh;
+	max-width: 120vh;
 	height: auto;
 	margin-top: 15vh;
 }
-
-h1 {
-	color: black;
-	font-size: 20px;
-	margin-top: 150px;
-	margin-bottom: 200px;
-}
-
 
 .podpis {
 	font-size: 0.8rem;
 }
 
-p {
-	font-weight: 200; 
-    font-size: 0.8rem;
+#place {
+	color: black;
+	font-size: 20px;
+	margin-top: 50px;
+	margin-bottom: 200px;
+	line-height: 40px;
+	text-transform: uppercase;
+}
+
+.more {
+	color: black;
+	font-size: 20px;
+	margin-top: 150px;
+	margin-bottom: 200px;
 }
 
 footer {
@@ -76,12 +80,12 @@ a button {
 	cursor: pointer;
 	transition: 0.3s;
 	text-transform: uppercase;
-	color: #ffffff85;
+	color: #ffffffc9;
 	margin-top: 20px;
 }
 
 a button:hover {
-	background: #ffffff80;
+	background: #ffffff9c;
 	transition: 0.3s;
 }
 
@@ -93,7 +97,7 @@ a button:hover {
 
 @media (max-width: 1000px){
 	#name {
-		max-width: 75vh;
+		max-width: 85vh;
 	}
 }
 
