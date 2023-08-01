@@ -11,6 +11,11 @@ body {
 	overflow-x: hidden;
 }
 
+.padding {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
 .top {
 	width: 100%;
 	height: 100vh;
@@ -64,6 +69,13 @@ p span {
 	margin-top: 15vh;
 }
 
+#date1 {
+	margin: 0 auto;
+	max-width: 120vh;
+	height: auto;
+	margin-top: 15vh;
+}
+
 .podpis {
 	font-size: 0.8rem;
 }
@@ -96,6 +108,9 @@ p span {
 .footer {
 	padding-top: 100px;
 	color: #C9C9C9;
+	text-transform: uppercase;
+	line-height: 188.6%;
+	padding-bottom: 40px;
 }
 
 a {
@@ -137,11 +152,17 @@ a button:hover {
 	#name {
 		max-width: 100vh;
 	}
+	#date1 {
+		max-width: 100vh;
+	}
 }
 
 @media (max-width: 1000px){
 	#name {
 		max-width: 85vh;
+	}
+	#date1 {
+		max-width: 100vh;
 	}
 }
 
@@ -155,6 +176,11 @@ a button:hover {
 		content:url("name1.png");
 		max-width: 100%; 
 	}
+	#date1 {
+		margin-top: 10vh;
+		max-width: 100%; 
+		content:url("date2.png");
+	}
 	#place {
 		font-size: 17px;
 		width: 80%;
@@ -163,5 +189,57 @@ a button:hover {
 	}
 	.small, .small2, a, .footer {
 		font-size: 15px;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}
+
+
+.gray {
+	font-size: 20px;
+	margin-top: 50px;
+	line-height: 40px;
+	text-transform: uppercase;
+	color: #A4A4A4;
+	padding-bottom: 50px;
+}
+
+.h2 {
+	font-family: inherit;
+	text-transform: uppercase;
+	font-size: 20px;
+	text-align: left;
+}
+
+.h2 > span {
+	border-bottom: 1px #A4A4A4 solid;
+	color: #A4A4A4;
+}
+
+.text {
+	color: black;
+	font-family: inherit;
+	text-transform: uppercase;
+	font-size: 19px;
+	text-align: left;
+	padding-left: 60px;
+	line-height: 35px
+}
+
+
+@media (max-width: 768px){
+	.gray {
+		font-size: 19px;
+		width: 80%;
+		margin: 50px auto;
+		line-height: 30px;
+	}
+	.h2 {
+
+	}
+	.text {
+		font-size: 17px;
+		padding-left: 0px;
+		line-height: 30px;
 	}
 }
