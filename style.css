@@ -188,7 +188,7 @@ a button:hover {
 		line-height: 30px;
 	}
 	.small, .small2, a, .footer {
-		font-size: 15px;
+		font-size: 13px;
 		padding-left: 3%;
 		padding-right: 3%;
 	}
@@ -196,7 +196,7 @@ a button:hover {
 
 
 .gray {
-	font-size: 20px;
+	font-size: 18px;
 	margin-top: 50px;
 	line-height: 40px;
 	text-transform: uppercase;
@@ -207,7 +207,7 @@ a button:hover {
 .h2 {
 	font-family: inherit;
 	text-transform: uppercase;
-	font-size: 20px;
+	font-size: 18px;
 	text-align: left;
 }
 
@@ -220,7 +220,7 @@ a button:hover {
 	color: black;
 	font-family: inherit;
 	text-transform: uppercase;
-	font-size: 19px;
+	font-size: 16px;
 	text-align: left;
 	padding-left: 60px;
 	line-height: 35px
@@ -229,17 +229,21 @@ a button:hover {
 
 @media (max-width: 768px){
 	.gray {
-		font-size: 19px;
+		font-size: 17px;
 		width: 80%;
 		margin: 50px auto;
 		line-height: 30px;
 	}
 	.h2 {
-
+		font-size: 17px;
 	}
 	.text {
-		font-size: 17px;
+		font-size: 15px;
 		padding-left: 0px;
 		line-height: 30px;
+	}
+	.padding a {
+		padding: 0;
+		font-size: 15px;
 	}
 }
